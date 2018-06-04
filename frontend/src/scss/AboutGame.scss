@@ -1,0 +1,699 @@
+@import "_fonts.scss";
+@import "_mediaqueries.scss";
+@import "_colors.scss";
+@import "_variables.scss";
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+  * {
+      &:before, &:after {
+          -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+      }
+  }
+}
+
+#aboutgame {
+  background: linear-gradient(90deg, #249084, #3EB490, #4CCC98, #54D99C, #68FFA8);
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+
+  .luminance-target {
+    -webkit-mask-image: url('../assets/images/banner-mask.png');
+    mask-image: url('../assets/images/banner-mask.png');
+    mask-mode: luminance;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top:0;
+    width:1100px;
+    max-width: 100vw;
+    height: 100vh;
+  
+    @media screen and (max-width: $breakpoint-tablet) {
+        -webkit-mask-image: none;
+        mask-image: none;
+        opacity: 0.3;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-height: 568px) {
+      display: none;
+    }
+  }
+  
+  
+  .centerVerticalGame {
+    margin-top: 170px;
+    padding-left: 30px;
+    padding-right: 0px;
+
+    @media screen and (max-width: $breakpoint-phone) {
+      margin-top: 110px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media screen and (max-height: 768px) {
+      margin-top:84px;
+    }
+  }
+
+    h1.headline {
+      font-size: 40px;
+      color: white;
+      text-align: left;
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: 600;
+  
+      @media screen and (max-width: $breakpoint-desktop) {
+        font-size: 3.5em;
+      }
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        font-size: 3em;
+        margin-left:15px;
+        margin-right:15px;
+      }
+
+      @media screen and (max-height: 700px) {
+        font-size: 2.5em;
+      }
+    }
+  
+    h2.subHeadline {
+      font-size: 24px;
+      line-height: 1.6;
+      color: white;
+      text-align: left;
+      font-family: 'Titillium Web', sans-serif;
+      margin-bottom: 50px;
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        font-size: 1.2em;
+        margin-left:15px;
+        margin-right:15px;
+      }
+
+      @media screen and (max-height: 700px) {
+        font-size: 0.94em;
+        margin-bottom:20px;
+      }
+    }
+  
+  .steps {
+    background-color: #fff;
+    max-width: 582px;
+    height: 75px;
+    box-shadow:  0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+  
+    @media screen and (max-width: $breakpoint-phone) {
+      height: 56px;
+      margin-bottom: 30px;
+      margin-left:0px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
+    @media screen and (max-height: 700px) {
+      margin-bottom:20px;
+    }
+
+  }
+  
+    p.steps_Headline {
+      position: relative;
+      margin-left: 20px;
+      padding-top: 13px;
+      font-family: 'Titillium Web';
+      font-size: 30px;
+      color: white;
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-height: 600px) {
+        font-size: 15px;
+      }
+    }
+  
+    p.steps_subtext {
+      position: relative;
+      z-index: 1;
+      margin-top: -60px;
+      margin-left: 55px;
+      color: white;
+      font-family: 'Titillium Web';
+      font-size: 16px;
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        font-size: 10px;
+        margin-top: -50px;
+      }
+
+      @media screen and (max-height: 600px) {
+        font-size: 9px;
+      }
+  
+    }
+  
+  #pointerDarkGreen {
+    width: 100%;
+    height: 75px;
+    position: relative;
+    background-color: #249084;
+  
+    @media screen and (max-width: $breakpoint-phone) {
+      height: 56px;
+    }
+  }
+  
+  
+  
+  #pointerDarkGreen:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 37.5px solid  #54D99C;
+    border-top: 37.5px solid transparent;
+    border-bottom: 37.5px solid transparent;
+  
+    @media screen and (max-width: $breakpoint-phone) {
+      border-left: 28px solid  #54D99C;
+      border-top: 28px solid transparent;
+      border-bottom: 28px solid transparent;
+      right: -28px;
+    }
+  }
+  
+  #pointerDarkGreen:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    right: -37.5px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 37.5px solid #249084;
+    border-top: 37.5px solid transparent;
+    border-bottom: 37.5px solid transparent;
+  
+    @media screen and (max-width: $breakpoint-phone) {
+      border-left: 28px solid  #249084;
+      border-top: 28px solid transparent;
+      border-bottom: 28px solid transparent;
+      right: -28px;
+    }
+  }
+  
+  #pointerWhite {
+    width: 100%;
+    height: 75px;
+    position: relative;
+    background-color: #fff;
+  
+    @media screen and (max-width: $breakpoint-phone) {
+      height: 56px;
+    }
+  }
+    .col-md-3 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .col-md-6 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .col-md-12 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  
+  #pointerLightGreen {
+    width: 100%;
+    height: 75px;
+    position: relative;
+    background-color: #54D99C;
+  
+    @media screen and (max-width: $breakpoint-phone) {
+      height: 56px;
+    }
+  }
+    .col-md-3 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .col-md-6 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .col-md-12 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  
+    #pointerWhite .imageOne {
+      margin-left: 55px;
+      padding-top: 12px;
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        width: 50%;
+        margin-left: 35px;
+        padding-top: 10px;
+      }
+    }
+    #pointerWhite .imageTwo {
+      margin-left: 63px;
+      padding-top: 7px;
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        width: 35%;
+        margin-left: 40px;
+        padding-top: 7px;
+      }
+    }
+    #pointerWhite .imageThree {
+      margin-left: 58px;
+      padding-top: 13px;
+  
+      @media screen and (max-width: $breakpoint-phone) {
+        width: 45%;
+        margin-left: 40px;
+        padding-top: 11px;
+      }
+    }
+  
+    .start-button {
+        margin-top:50px;
+        margin-left: -10;
+  
+        .next_button {
+            background: #fff;
+            color:#249084;
+            outline: none;
+            border-color: #fff;
+            border-radius: 0;
+            display: inline-block;
+            font-family: TitilliumWeb-Regular;
+            font-weight: 600;
+            font-size: 20px;
+            text-align: left;
+            padding: 20px 25px 20px 40px;
+            position: relative;
+            text-decoration: none;
+            width: 400px;
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  
+            &:hover, &:focus, &:visited, &:active, &:hover:before, &hover:after, &focus:before, &:focus:after {
+                color: #249084 !important;
+                background-color: #fff !important;
+                border-color: #fff !important;
+                border:none !important;
+                outline:none !important;
+            }
+  
+            @media screen and (max-width: $breakpoint-tablet) {
+              max-width: 582px;
+              width: 100%;
+              min-width: 240px;
+              padding: 20px 20px 20px 20px;
+
+            }
+
+            @media screen and (max-height: 700px) {
+              width:100%;
+              max-width: inherit;
+              padding: 15px 15px 15px 15px;
+            }
+  
+        }
+  
+        .login_overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 10;
+  
+            &:target {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            @media screen and (max-height: 700px) {
+              top:-26px;
+            }
+        }
+  
+        .login_popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 52%;
+            position: relative;
+            transition: all 5s ease-in-out;
+  
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+  
+                &:hover {
+                    color: #06D85F;
+                }
+
+                @media screen and (max-height: 568px) {
+                  top: 10px;
+                }
+            }
+  
+            .content {
+                max-height: 30%;
+                overflow: auto;
+                color:$color-green;
+                margin: 0px 40px 0px 40px;
+  
+                .login_type_selection {
+                    margin-top:70px;
+  
+                    .focus {
+                        background: $color-green;
+                        outline:none;
+                        color: $color-white;
+                        cursor: pointer;
+                    }
+  
+                    .notactive {
+                        background: $color-white !important;
+                        color: $color-green !important;
+                    }
+  
+                    .active {
+                        background: $color-green !important;
+                        color: $color-white !important;
+                    }
+  
+                    p:nth-child(2) {
+                        font-family: TitilliumWeb-SemiBold;
+                        font-size: 1.1em;
+                        text-align: center;
+                    }
+  
+                    p:nth-child(3) {
+                        font-family: TitilliumWeb-Light;
+                        font-size: 1em;
+                        text-align: center;
+                        line-height: inherit;
+                    }
+  
+                    .activee {
+                      background: $color-green;
+                      color: $color-white;
+                    }
+
+                    @media screen and (max-height: 568px) {
+                      margin-top: 40px;
+                    }
+                }
+  
+                .login_type {
+                    width:49%;
+                    display: inline-block;
+                    border-radius: 0;
+                    padding: 10px 18px;
+                    background: $color-white;
+                    color: $color-green;
+                    margin-right: -2px;
+                    border: 1px solid #249084;
+                    letter-spacing: 1px;
+                    -moz-transition: all 0.2s;
+                    -webkit-transition: all 0.2s;
+                    transition: all 0.2s;
+                }
+  
+                #new_login {
+                    margin-right: -2px;
+                    -webkit-transition: all 1s ease-in-out;
+                    -moz-transition: all 1s ease-in-out;
+                    -o-transition: all 1s ease-in-out;
+                    -ms-transition: all 1s ease-in-out;
+  
+                    &:hover {
+                        background: $color-green;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        color:$color_white;
+                        margin-right: 1px;
+                        text-decoration: none;
+                    }
+                }
+  
+                #login {
+                    margin-left: -2px;
+                    -webkit-transition: all 1s ease-in-out;
+                    -moz-transition: all 1s ease-in-out;
+                    -o-transition: all 1s ease-in-out;
+                    -ms-transition: all 1s ease-in-out;
+  
+                    &:hover {
+                        background: $color-green;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        color:$color_white;
+                        margin-left: 0px;
+                        text-decoration: none;
+                    }
+                }
+  
+                #login_options {
+                    text-align: center;
+  
+                    .social-button {
+                        background-position: 25px 0px;
+                        box-sizing: border-box;
+                        color: rgb(255, 255, 255);
+                        cursor: pointer;
+                        display: inline-block;
+                        height: 50px;
+                        line-height: 50px;
+                        font-family: TitilliumWeb-Regular;
+                        font-size: 1em;
+                        text-align: left;
+                        text-decoration: none;
+                        vertical-align: middle;
+                        width: 85%;
+                        border-color: $color-white;
+                        margin: 10px auto;
+                        outline: rgb(255, 255, 255) none 0px;
+                        padding-left: 20%;
+                        transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+                        -webkit-transition: all .3s ease;
+                        -moz-transition: all .3s ease;
+                        -ms-transition: all .3s ease;
+                        -o-transition: all .3s ease;
+                        transition: all .3s ease;
+  
+                        &:hover {
+                          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        }
+                    }
+  
+                    #facebook-connect {
+                        border: 1px solid rgb(60, 90, 154);
+                        border-color: rgb(60, 90, 154);
+                        background: rgb(60, 90, 154) url('https://eswarasai.com/projects/social-login/img/facebook-white.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+                    }
+  
+                    #google-connect {
+                        background: #F6F6F6 url('../assets/images/google.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+                        // border: 1px solid rgb(220, 74, 61);
+                        color:#505050;
+  
+                        &:hover {
+  
+                        }
+                    }
+  
+                    #twitter-connect {
+                        background: rgb(85, 172, 238) url('../assets/images/twitter.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+                        border: 1px solid rgb(85, 172, 238);
+                        background-size: 8%;
+                        background-position: 4%;
+                      }
+                }
+  
+                .choice {
+                    font-family: TitilliumWeb-Bold;
+                    font-size: 1.4em;
+                    text-align: center;
+                    line-height: inherit;
+                }
+  
+                #skip_login {
+                  text-decoration: none;
+  
+                  .choice_1 {
+                      font-family: TitilliumWeb-Regular;
+                      font-size: 1em;
+                      text-align: center;
+                      line-height: inherit;
+                      color: $color-green;
+                  }
+                }
+  
+                @media screen and (max-width: $breakpoint-phone) {
+                    margin: 0 auto;
+                }
+            }
+  
+            @media screen and (max-width: $breakpoint-tablet) {
+                width: 90%;
+            }
+
+            @media screen and (max-height: 568px) {
+              margin: 40px auto;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-desktop) {
+          margin-left:-15px;
+        }
+  
+        @media screen and (max-width: $breakpoint-tablet) {
+            margin-right:15px;
+        }
+
+        @media screen and (max-height: 850px) {
+          margin-left: 0px !important;
+          margin-top: 20px;
+          margin-right: 0px;
+          margin-bottom: 15px;
+        }
+
+        @media screen and (min-width: 500px) {
+          margin-left: -15px !important;
+        }
+
+        @media screen and (max-width: $breakpoint-tablet) {
+          max-width: 582px;
+          width: 100%;
+        }
+    }
+  
+    .next_button {
+  
+        &:after, &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          transition: all 0.5s ease-in-out;
+        }
+        &:before {
+          top: 50%;
+          right: 1em;
+          width: $arrow-size;
+          height: $arrow-size;
+          transform-origin: 50% 50%;
+          transform:  translate(0, -($arrow-size / 2)) rotate(45deg);
+          box-shadow: inset -#{$arrow-border} $arrow-border 0 0 $arrow-color;
+          border-radius: 0 $arrow-size*0.15 0 0;
+        }
+  
+        &:after {
+          top: 50%;
+          right: 1em;
+          width: 2.91em;
+          height: $arrow-border;
+          transform:  translate(0, -($arrow-border / 2));
+          background-color: $arrow-color;
+        }
+        &:hover {
+          &:before {
+            transform:  translate(0.5em, -($arrow-size / 2)) rotate(45deg);
+          }
+          &:after {
+            transform:  translate(0.5em, -($arrow-border / 2));
+            width:2em;
+            background-color: #249084 !important;
+  
+          }
+        }
+
+    
+    }
+  
+
+    .socials_content {
+      @media screen and (max-width: $breakpoint-mediumDown) {
+        position : relative !important;
+      }
+
+      @media screen and (max-height: 900px) {
+        position : fixed !important;
+      }
+
+      @media screen and (max-height: 568px) {
+        position : relative !important;
+      }
+
+
+      .share-social {
+        .social {
+          @media screen and (max-height: 700px) {
+            width: 30px;
+            height: 30px;
+            line-height: 26px;
+            font-size: 15px;
+            margin-bottom: 10px !important;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-height: 568px) {
+      overflow-y : scroll !important;
+    }
+}
+
+
+

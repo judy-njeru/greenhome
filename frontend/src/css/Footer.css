@@ -1,0 +1,33 @@
+.menu-active {
+  z-index: 2; }
+  .menu-active .share-social .social {
+    color: #249084;
+    cursor: pointer;
+    border: 2px solid #249084; }
+
+@media screen and (max-width: 992px) {
+  .socials_content {
+    position: fixed !important; } }
+
+.share-social {
+  text-align: right; }
+  .share-social .social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: color .3s; }
+    .share-social .social:hover {
+      color: #249084;
+      cursor: pointer;
+      border: 2px solid #249084; }
+  @media screen and (max-width: 500px) {
+    .share-social {
+      text-align: center; } }

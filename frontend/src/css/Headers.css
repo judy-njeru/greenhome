@@ -1,0 +1,185 @@
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  width: 100%; }
+  header .navbar-inverse {
+    background-color: transparent;
+    border-color: transparent; }
+    header .navbar-inverse .container-fluid {
+      padding: 0; }
+      header .navbar-inverse .container-fluid .navbar-right {
+        margin-right: 0px !important; }
+        @media screen and (max-width: 992px) {
+          header .navbar-inverse .container-fluid .navbar-right {
+            margin-right: 0px !important; } }
+  header .navbar {
+    margin-top: 4%; }
+
+.logo img {
+  width: 120px; }
+
+.shrink .logo img {
+  width: 120px; }
+
+.shrink .navbar {
+  margin-top: 1%;
+  padding: 0;
+  margin-bottom: 7px; }
+
+.shrink {
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+  box-shadow: 0 8px 20px -4px #0000002e; }
+
+.shrink .nav.navbar-right {
+  margin-top: 10px; }
+
+.shrink .button_container span {
+  background: #6db4ac; }
+
+.button_container {
+  position: relative;
+  top: 5%;
+  right: 0;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease; }
+  .button_container:hover {
+    opacity: .7; }
+  .button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #249084; }
+  .button_container.active .middle {
+    opacity: 0;
+    background: #FFF; }
+  .button_container.active .bottom {
+    transform: translateY(-9px) translateX(0) rotate(-45deg);
+    background: #249084; }
+  .button_container span {
+    background: #fff;
+    border: none;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer; }
+  .button_container span:nth-of-type(2) {
+    top: 10px;
+    width: 25px;
+    right: 0 !important;
+    left: unset; }
+  .button_container span:nth-of-type(3) {
+    top: 20px; }
+  @media screen and (max-width: 768px) {
+    .button_container {
+      position: absolute;
+      top: 36%; } }
+
+.overlay {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, width .35s;
+  overflow: hidden; }
+  @media screen and (max-width: 800px) {
+    .overlay .overlay-menu {
+      padding-right: 0px; } }
+  .overlay.open {
+    opacity: 10;
+    visibility: visible;
+    height: 100%;
+    width: 26%;
+    padding: 30px; }
+    @media screen and (max-width: 500px) {
+      .overlay.open {
+        width: 100%; } }
+  .overlay.closed {
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+    width: 0%;
+    transition: opacity .35s, visibility .35s, width .35s;
+    z-index: 1; }
+    @media screen and (max-width: 500px) {
+      .overlay.closed {
+        width: 100%; } }
+  .overlay.deactivate {
+    opacity: 0; }
+  .overlay.open li {
+    animation: fadeInRight .5s ease forwards;
+    animation-delay: .35s; }
+  .overlay.open li:nth-of-type(2) {
+    animation-delay: .4s; }
+  .overlay.open li:nth-of-type(3) {
+    animation-delay: .45s; }
+  .overlay.open li:nth-of-type(4) {
+    animation-delay: .50s; }
+  .overlay nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center; }
+    .overlay nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      text-align: right;
+      display: inline-block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      max-width: 190px; }
+      @media screen and (max-width: 500px) {
+        .overlay nav ul {
+          text-align: center;
+          max-width: 225px; } }
+      .overlay nav ul #login {
+        margin-top: 90px; }
+      .overlay nav ul li {
+        height: 25%;
+        height: calc(100% / 4);
+        min-height: 58px;
+        opacity: 0; }
+        .overlay nav ul li > div {
+          position: relative;
+          display: inline-block;
+          padding: 0px 2px; }
+        .overlay nav ul li .underline--style a {
+          display: block;
+          font-family: TitilliumWeb-Regular;
+          font-size: 1.2em;
+          color: #249084;
+          text-decoration: none;
+          cursor: pointer; }
+          .overlay nav ul li .underline--style a:hover {
+            font-family: TitilliumWeb-Bold; }
+            .overlay nav ul li .underline--style a:hover::after {
+              border-bottom: 14px solid #00c7853d;
+              content: "";
+              left: 0;
+              margin-top: calc(0.125em / 2 * -1);
+              position: absolute;
+              right: 0;
+              top: 51%; }
+          @media screen and (max-width: 500px) {
+            .overlay nav ul li .underline--style a {
+              font-size: 1.5em;
+              text-align: center; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }

@@ -1,0 +1,29 @@
+{
+  "name": "graent_heimili",
+  "version": "1.0.0",
+  "description": "site for helping people take first steps into making their homes more eco-friendly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperGirlDominators/graent_heimili.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperGirlDominators/graent_heimili/issues"
+  },
+  "homepage": "https://github.com/SuperGirlDominators/graent_heimili#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "firebase-admin": "^5.11.0",
+    "hoek": "^5.0.3",
+    "jsonwebtoken": "^8.2.0",
+    "mysql": "^2.15.0"
+  }
+}
